@@ -1,0 +1,22 @@
+body {
+  font-family: Georgia, serif;
+  background: #fdfdfd;
+  color: #222;
+  line-height: 1.7;
+}
+
+.story {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.meta {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
