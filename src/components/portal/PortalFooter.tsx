@@ -1,6 +1,7 @@
 import React from 'react';
-import { Feather, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { PortalContent } from '../../types/portal';
+import { UrgeIQLogo } from '../common/UrgeIQLogo';
 
 interface PortalFooterProps {
   content: PortalContent;
@@ -14,54 +15,51 @@ export const PortalFooter: React.FC<PortalFooterProps> = ({ content }) => {
   };
 
   return (
-    <footer className="border-t border-neutral-200/80 bg-neutral-900 text-neutral-300 py-16 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer className="border-t border-neutral-200/70 bg-[#FAF9F6] text-neutral-600 py-12 px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         
-        {/* Brand & Quote */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <div className="flex items-center gap-2.5 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400">
-              <Feather className="w-4 h-4" />
-            </div>
-            <span className="font-serif text-lg font-bold text-white">
-              {content.brand.name}
-            </span>
-          </div>
-          <p className="text-xs text-neutral-400 max-w-sm">
-            {content.brand.title} &bull; {content.brand.location}
-          </p>
+        {/* Brand */}
+        <div className="flex items-center gap-2.5">
+          <UrgeIQLogo size={24} withBg={true} className="rounded-lg shadow-2xs" />
+          <span className="text-xs font-semibold text-neutral-900 font-sans">
+            {content.brand.name}
+          </span>
+          <span className="text-neutral-300">•</span>
+          <span className="text-[11px] text-neutral-400">
+            {content.brand.title}
+          </span>
         </div>
 
         {/* Subdomain Links */}
-        <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-400 font-medium">
+        <div className="flex flex-wrap items-center justify-center gap-5 text-xs text-neutral-500 font-medium">
           <a
             href="https://novel.tahirurge.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-amber-300 transition-colors flex items-center gap-1.5"
+            className="hover:text-neutral-900 transition-colors"
           >
-            <span>novel.tahirurge.com</span>
+            novel.tahirurge.com
           </a>
-          <span className="text-neutral-700">•</span>
+          <span className="text-neutral-300">•</span>
           <a
             href="https://pnl.tahirurge.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-indigo-300 transition-colors flex items-center gap-1.5"
+            className="hover:text-neutral-900 transition-colors"
           >
-            <span>pnl.tahirurge.com</span>
+            pnl.tahirurge.com (UrgeIQ)
           </a>
         </div>
 
         {/* Copyright & Scroll to top */}
-        <div className="flex items-center gap-4 text-xs text-neutral-500">
-          <span>&copy; {currentYear} {content.brand.name}. {content.footer.copyright}</span>
+        <div className="flex items-center gap-3 text-[11px] text-neutral-400">
+          <span>&copy; {currentYear} {content.brand.name}</span>
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg border border-neutral-200 bg-white hover:bg-neutral-100 text-neutral-500 hover:text-neutral-900 transition-colors cursor-pointer shadow-2xs"
             title="Yukarı Çık"
           >
-            <ArrowUp className="w-4 h-4" />
+            <ArrowUp className="w-3.5 h-3.5" />
           </button>
         </div>
 

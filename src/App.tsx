@@ -24,8 +24,8 @@ export const App: React.FC = () => {
   useEffect(() => {
     document.documentElement.lang = language;
     document.title = language === 'tr'
-      ? 'Mehmet Tahir Ürge — Dijital Ekosistem & Kişisel Portal'
-      : 'Mehmet Tahir Ürge — Digital Ecosystem & Personal Hub';
+      ? 'Mehmet Tahir Ürge — UrgeIQ & Edebi Eserler'
+      : 'Mehmet Tahir Ürge — UrgeIQ & Literature';
   }, [language]);
 
   const handleScrollTo = (id: string) => {

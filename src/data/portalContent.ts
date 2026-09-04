@@ -4,101 +4,101 @@ export const portalContent: Record<Language, PortalContent> = {
   tr: {
     brand: {
       name: "Mehmet Tahir Ürge",
-      title: "Yazılım Mühendisliği & Edebiyat",
+      title: "Yazılım Sistemleri & Edebiyat",
       location: "İstanbul, TR"
     },
     hero: {
-      badge: "Dijital Ekosistem & Kişisel Portal",
-      greeting: "Merhaba, ben Mehmet Tahir Ürge.",
-      lead: "Yazılım mimarisi, finansal veri sistemleri ve edebi kurgunun kesişiminde dijital deneyimler inşa ediyorum.",
-      sublead: "Bu portal; kaleme aldığım edebiyat eserlerimin, geliştirdiğim finansal yönetim sistemlerinin ve geleceğe dönük teknolojik girişimlerimin ana giriş kapısıdır.",
-      ctaProjects: "Projeleri İncele",
+      badge: "Kişisel Ekosistem",
+      greeting: "Mehmet Tahir Ürge",
+      lead: "Yazılım mimarisi, finansal zeka ve edebi kurgu.",
+      sublead: "Teknoloji, veri odaklı analitik sistemler ve felsefi anlatıların buluştuğu bağımsız üretim alanı.",
+      ctaProjects: "Çalışmaları İncele",
       ctaAbout: "Hakkımda"
     },
     projectsSection: {
-      title: "Dijital Ekosistem & Projeler",
-      subtitle: "Edebiyattan işletme zekasına, üzerinde çalıştığım aktif ve geleceğe dönük çalışmalar.",
-      viewProject: "Projeyi Aç",
-      statusActive: "Yayında & Aktif",
-      statusUpcoming: "Geliştirme Aşamasında"
+      title: "Ekosistem & Projeler",
+      subtitle: "Edebiyattan finansal istihbarata, aktif ve geliştirme aşamasındaki çalışmalar.",
+      viewProject: "İncele",
+      statusActive: "Yayında",
+      statusUpcoming: "Geliştiriliyor"
     },
     aboutSection: {
-      title: "Hakkımda & Yaklaşım",
-      subtitle: "Fikirlerin, sistemlerin ve kelimelerin bir araya geldiği nokta.",
+      title: "Hakkımda",
+      subtitle: "Sistemler, kod ve kelimeler.",
       paragraphs: [
-        "Modern çağın karmaşık veri akışlarını anlamlı sistemlere dönüştürürken, aynı zamanda insan ruhunun içsel labirentlerini felsefi ve edebi eserlerle keşfetmeyi amaçlıyorum.",
-        "Finansal analiz ve POS otomasyonlarından, felsefi bilim kurgu novellalarına uzanan bu çok yönlü yolculuk; teknik mükemmeliyetçilik ile sanatsal özgünlüğü bir araya getirme tutkumun bir yansımasıdır."
+        "Karmaşık veri akışlarını yalın ve yüksek performanslı yazılım mimarilerine dönüştürüyorum. UrgeIQ ile finansal operasyonları akılcılaştırırken, edebiyat çalışmalarımla varoluşsal ikilemleri ve sistem dinamiklerini araştırıyorum.",
+        "Mühendislik titizliğini felsefi derinlikle buluşturarak hem güvenilir analitik araçlar hem de düşündüren anlatılar inşa ediyorum."
       ],
       focusAreasTitle: "Odak Alanları",
       focusAreas: [
         {
+          title: "Yazılım Mimarisi",
+          description: "React, TypeScript ve bulut altyapılarıyla hızlı, güvenli ve dayanıklı web sistemleri."
+        },
+        {
+          title: "UrgeIQ Finansal Zekası",
+          description: "İşletmeler için gerçek zamanlı nakit akışı, dinamik POS komisyon optimizasyonu ve karar destek motorları."
+        },
+        {
           title: "Edebi Kurgu & Felsefe",
-          description: "Varoluşsal ikilemleri, distopik mükemmeliyetçiliği ve insan bilincini irdeleyen derin anlatılar."
-        },
-        {
-          title: "Finansal Sistemler & PnL",
-          description: "İşletmeler için gerçek zamanlı nakit akışı, POS komisyon yönetimi ve bulut tabanlı karar destek araçları."
-        },
-        {
-          title: "Modern Web Mimarisi",
-          description: "Vite, React, TypeScript ve bulut veritabanlarıyla hızlı, güvenli ve estetik dijital platformlar."
+          description: "Varoluşsal temaları, distopik mükemmeliyetçiliği ve insan bilincini irdeleyen derin anlatılar."
         }
       ]
     },
     footer: {
-      quote: "Mükemmellik sıkıcıdır; aslolan sistemin içindeki o keşfedilmeyi bekleyen çatlağı bulmaktır.",
+      quote: "Mükemmellik sıkıcıdır; aslolan sistemin içindeki o çatlağı bulmaktır.",
       copyright: "Tüm hakları saklıdır.",
-      builtWith: "React 19 & Tailwind CSS ile tasarlandı."
+      builtWith: "React 19 & Tailwind CSS"
     }
   },
   en: {
     brand: {
       name: "Mehmet Tahir Ürge",
-      title: "Software Engineering & Literature",
+      title: "Software Systems & Literature",
       location: "Istanbul, TR"
     },
     hero: {
-      badge: "Digital Ecosystem & Personal Portal",
-      greeting: "Hello, I am Mehmet Tahir Ürge.",
-      lead: "Building digital experiences at the intersection of software architecture, financial data systems, and literary fiction.",
-      sublead: "This portal serves as the primary gateway to my published novellas, financial intelligence platforms, and future technological ventures.",
-      ctaProjects: "Explore Projects",
-      ctaAbout: "About Me"
+      badge: "Personal Ecosystem",
+      greeting: "Mehmet Tahir Ürge",
+      lead: "Software architecture, financial intelligence, and literary fiction.",
+      sublead: "An independent nexus where modern software, data-driven systems, and philosophical fiction converge.",
+      ctaProjects: "Explore Works",
+      ctaAbout: "About"
     },
     projectsSection: {
-      title: "Digital Ecosystem & Works",
-      subtitle: "From literature to business intelligence, exploring active and forthcoming initiatives.",
-      viewProject: "Open Project",
-      statusActive: "Live & Active",
-      statusUpcoming: "Under Development"
+      title: "Ecosystem & Projects",
+      subtitle: "Active and forthcoming initiatives spanning fiction to financial decision engines.",
+      viewProject: "Explore",
+      statusActive: "Live",
+      statusUpcoming: "In Progress"
     },
     aboutSection: {
-      title: "About & Philosophy",
-      subtitle: "Where ideas, systems, and words converge.",
+      title: "About",
+      subtitle: "Systems, code, and narrative.",
       paragraphs: [
-        "While transforming complex modern data streams into cohesive, elegant architectures, I also endeavor to explore the labyrinth of human consciousness through philosophical and literary narratives.",
-        "Spanning from real-time cash flow analytics to philosophical science fiction novellas, this journey reflects my passion for merging technical rigor with creative authenticity."
+        "I build elegant, high-performance software systems from complex data streams. Through UrgeIQ, I streamline real-world commercial finance, while exploring existential paradoxes through literary fiction.",
+        "Blending technical rigor with narrative depth to build dependable analytical tools and thought-provoking literature."
       ],
       focusAreasTitle: "Areas of Focus",
       focusAreas: [
         {
+          title: "Software Architecture",
+          description: "High-performance, secure digital platforms engineered with React, TypeScript, and modern cloud stacks."
+        },
+        {
+          title: "UrgeIQ Financial OS",
+          description: "Real-time cash flow intelligence, multi-bank POS commission optimization, and cloud decision engines."
+        },
+        {
           title: "Literary Fiction & Philosophy",
-          description: "Narratives exploring existential paradoxes, dystopian perfection, and human alienation."
-        },
-        {
-          title: "Financial Systems & PnL",
-          description: "Real-time cash flow trackers, POS reconciliation tools, and cloud-native decision support engines."
-        },
-        {
-          title: "Modern Web Architecture",
-          description: "High-performance, secure, and aesthetic digital platforms engineered with React, Vite, and TypeScript."
+          description: "Narratives examining existential dilemmas, dystopian perfection, and human alienation."
         }
       ]
     },
     footer: {
       quote: "Perfection was boring; what truly matters is discovering the crack waiting inside the system.",
       copyright: "All rights reserved.",
-      builtWith: "Crafted with React 19 & Tailwind CSS."
+      builtWith: "React 19 & Tailwind CSS"
     }
   }
 };
@@ -109,55 +109,52 @@ export const portalProjects: Record<Language, ProjectItem[]> = {
       id: "zero-sum-city",
       title: "Zero Sum City",
       subtitle: "Felsefi Bilim Kurgu Novellası",
-      tag: "Edebiyat & Roman",
+      tag: "Edebiyat",
       status: "active",
-      statusText: "Yayında • 31 Bölüm",
-      description: "Mükemmelliğin sıkıcı hale geldiği, tüm sürtünmelerin sistem tarafından emildiği distopik bir gelecekte; sistem gözlemcisi Taylor'ın keşfettiği açıklanamaz anomaliyi konu alan modern bir novella.",
+      statusText: "31 Bölüm • Çift Dil",
+      description: "Mükemmelliğin tektipleştirdiği distopik bir gelecekte, sistem gözlemcisi Taylor'ın keşfettiği anomaliyi konu alan modern bir anlatı.",
       features: [
-        "31 Tam Bölüm (İngilizce & Türkçe)",
-        "Dikkat Dağıtmayan E-Kitap Okuma Odası",
-        "Kağıt, Sepya ve Gece Temaları",
-        "İlerleme Takibi ve Bölüm Çekmecesi"
+        "31 Tam Bölüm (Türkçe & İngilizce)",
+        "Odaklanmış Minimalist Okuma Deneyimi",
+        "Kağıt, Sepya ve Gece Temaları"
       ],
       link: "https://novel.tahirurge.com",
-      linkText: "Romanı Oku (novel.tahirurge.com)",
+      linkText: "novel.tahirurge.com",
       isExternal: true,
       accentColor: "from-amber-500/20 to-neutral-900/10",
       category: "literature"
     },
     {
-      id: "pnl-dashboard",
-      title: "Murat Finansal Dashboard",
-      subtitle: "Gerçek Zamanlı POS & Nakit Akışı Yönetimi",
-      tag: "Finans & İş Zekası",
+      id: "urgeiq-financial",
+      title: "UrgeIQ",
+      subtitle: "Finansal İstihbarat & POS Kontrol Sistemi",
+      tag: "FinTech & SaaS",
       status: "active",
       statusText: "Canlı Operasyon • v0.15",
-      description: "Gıda ve perakende operasyonları için geliştirilmiş; günlük kasa, çoklu banka POS komisyon optimizasyonu, MSSQL Server ve Supabase çift yönlü veri eşitleme merkezi.",
+      description: "Çoklu banka POS komisyon optimizasyonu, net kâr/zarar takibi ve MSSQL-Supabase çift yönlü veri eşitleme işletim sistemi.",
       features: [
-        "Banka Bazlı Dinamik Komisyon Hesaplama",
-        "Günlük Kasa, Fatura ve Harcama Analitiği",
-        "MSSQL & Supabase Bulut Veritabanı Entegrasyonu",
-        "Excel Dışa/İçe Aktarım ve Snapshot Yedekleme"
+        "Banka Bazlı Dinamik Komisyon & Net Kâr Hesaplama",
+        "MSSQL & Supabase Çift Yönlü Bulut Entegrasyonu",
+        "Gerçek Zamanlı Kasa, Fatura ve Harcama Analitiği"
       ],
       link: "https://pnl.tahirurge.com",
-      linkText: "Finansal Portala Git (pnl.tahirurge.com)",
+      linkText: "pnl.tahirurge.com",
       isExternal: true,
       accentColor: "from-indigo-500/20 to-neutral-900/10",
       category: "finance"
     },
     {
-      id: "future-lab",
-      title: "Gelecek Girişimler & Lab",
-      subtitle: "Yeni Nesil SaaS, AI & Açık İnovasyon",
+      id: "urgeiq-labs",
+      title: "UrgeIQ Labs",
+      subtitle: "Yeni Nesil SaaS & Deneysel Araçlar",
       tag: "Ar-Ge & Teknoloji",
       status: "in-progress",
-      statusText: "Geliştirme Aşamasında",
-      description: "Yapay zekâ destekli analiz araçları, yeni edebi metinler ve mikro web ürünleri için kuluçka merkezi. Gelecekte hayata geçirilecek yeni projelerin başlangıç noktası.",
+      statusText: "Geliştiriliyor",
+      description: "Yapay zekâ destekli karar destek araçları, analitik mikro servisler ve deneysel dijital ürünler için kuluçka merkezi.",
       features: [
         "Yapay Zekâ Tabanlı İçerik ve Analiz Araçları",
-        "Yeni Nesil Dijital Ürün Denemeleri",
         "Açık Kaynak Geliştirici Kütüphaneleri",
-        "Çok Yakında Duyurulacak"
+        "Yeni Nesil Dijital Ürün Denemeleri"
       ],
       link: "#",
       linkText: "Pek Yakında",
@@ -171,55 +168,52 @@ export const portalProjects: Record<Language, ProjectItem[]> = {
       id: "zero-sum-city",
       title: "Zero Sum City",
       subtitle: "Philosophical Sci-Fi Novella",
-      tag: "Literature & Fiction",
+      tag: "Literature",
       status: "active",
-      statusText: "Published • 31 Chapters",
-      description: "Set in a frictionless dystopian future where perfection has rendered existence mundane, systems observer Taylor encounters an unverified anomaly that begins to unravel the illusion of certainty.",
+      statusText: "31 Chapters • Bilingual",
+      description: "In a frictionless dystopian future where perfection eliminates humanity, systems observer Taylor encounters an unverified anomaly.",
       features: [
         "31 Complete Chapters (EN & TR)",
-        "Immersive Distraction-Free Reader Room",
-        "Paper, Sepia, and Obsidian Themes",
-        "Progress Tracker and Dynamic Chapter Drawer"
+        "Distraction-Free Minimalist Reader",
+        "Paper, Sepia, and Obsidian Themes"
       ],
       link: "https://novel.tahirurge.com",
-      linkText: "Read Novella (novel.tahirurge.com)",
+      linkText: "novel.tahirurge.com",
       isExternal: true,
       accentColor: "from-amber-500/20 to-neutral-900/10",
       category: "literature"
     },
     {
-      id: "pnl-dashboard",
-      title: "Murat Financial Dashboard",
-      subtitle: "Real-Time POS & Cash Flow Intelligence",
-      tag: "Finance & BI",
+      id: "urgeiq-financial",
+      title: "UrgeIQ",
+      subtitle: "Financial Intelligence & POS Control OS",
+      tag: "FinTech & SaaS",
       status: "active",
       statusText: "Live Production • v0.15",
-      description: "Tailored for retail and commercial enterprise operations; tracks multi-bank POS settlements, commission optimization, MSSQL Server and Supabase bi-directional cloud synchronization.",
+      description: "Next-gen financial operating system offering multi-bank POS settlement tracking, commission optimization, and bi-directional cloud sync.",
       features: [
         "Dynamic Multi-Bank POS Commission Engine",
-        "Daily Cash, Invoices, and Expense Breakdown",
-        "MSSQL & Supabase Cloud Database Integration",
-        "Excel Export/Import & Automatic Cloud Snapshot"
+        "MSSQL & Supabase Bi-Directional Cloud Sync",
+        "Real-Time Cash Flow, Invoices & Expense Analytics"
       ],
       link: "https://pnl.tahirurge.com",
-      linkText: "Access Portal (pnl.tahirurge.com)",
+      linkText: "pnl.tahirurge.com",
       isExternal: true,
       accentColor: "from-indigo-500/20 to-neutral-900/10",
       category: "finance"
     },
     {
-      id: "future-lab",
-      title: "Future Ventures & Lab",
-      subtitle: "Next-Gen SaaS, AI & Open Innovation",
+      id: "urgeiq-labs",
+      title: "UrgeIQ Labs",
+      subtitle: "Next-Gen SaaS & Experimental Utilities",
       tag: "R&D & Tech",
       status: "in-progress",
-      statusText: "Under Development",
-      description: "An incubator for AI-assisted analytical utilities, upcoming literature installments, and micro-web products. The genesis hub for future initiatives.",
+      statusText: "In Development",
+      description: "An innovation incubator for AI-assisted analytical tools, modern micro-services, and experimental digital product MVPs.",
       features: [
-        "AI-Powered Content & Intelligence Tools",
-        "Experimental Digital Product MVPs",
+        "AI-Powered Content & Intelligence Engines",
         "Open-Source Developer Utilities",
-        "Announcing Soon"
+        "Next-Gen Experimental Web MVPs"
       ],
       link: "#",
       linkText: "Coming Soon",
