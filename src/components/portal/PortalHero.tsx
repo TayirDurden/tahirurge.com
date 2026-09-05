@@ -5,6 +5,7 @@ import { UrgeIQLogo } from '../common/UrgeIQLogo';
 
 interface PortalHeroProps {
   content: PortalContent;
+  version?: string;
   onScrollToUrgeIQ: () => void;
   onScrollToHobby: () => void;
   onScrollToAbout: () => void;
@@ -12,11 +13,14 @@ interface PortalHeroProps {
 
 export const PortalHero: React.FC<PortalHeroProps> = ({
   content,
+  version,
   onScrollToUrgeIQ,
   onScrollToHobby,
   onScrollToAbout,
 }) => {
   const { hero, urgeiqSection } = content;
+  const badgePrefix = hero.liveBadge.includes('•') ? hero.liveBadge.split('•')[0].trim() : hero.liveBadge;
+  const displayVersionBadge = version ? `${badgePrefix} • v${version}` : hero.liveBadge;
 
   return (
     <section className="relative overflow-hidden pt-14 pb-16 md:pt-20 md:pb-24 border-b border-neutral-200/60">
@@ -31,7 +35,7 @@ export const PortalHero: React.FC<PortalHeroProps> = ({
           <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
           <span>{hero.badge}</span>
           <span className="text-neutral-300">•</span>
-          <span className="text-indigo-600 font-medium">{hero.liveBadge}</span>
+          <span className="text-indigo-600 font-medium">{displayVersionBadge}</span>
         </div>
 
         {/* Brand Icon & Heading */}

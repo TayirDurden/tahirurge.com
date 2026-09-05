@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Language } from './types/portal';
 import { portalContent } from './data/portalContent';
+import { useUrgeIQVersion } from './hooks/useUrgeIQVersion';
 import { PortalNavbar } from './components/portal/PortalNavbar';
 import { PortalHero } from './components/portal/PortalHero';
 import { UrgeIQShowcase } from './components/portal/UrgeIQShowcase';
@@ -14,6 +15,8 @@ export const App: React.FC = () => {
     if (saved === 'tr' || saved === 'en') return saved;
     return navigator.language.toLowerCase().startsWith('tr') ? 'tr' : 'en';
   });
+
+  const urgeiqVersion = useUrgeIQVersion();
 
   const handleToggleLanguage = () => {
     const nextLang: Language = language === 'tr' ? 'en' : 'tr';
@@ -50,12 +53,13 @@ export const App: React.FC = () => {
       <main className="flex-1">
         <PortalHero
           content={currentContent}
+          version={urgeiqVersion}
           onScrollToUrgeIQ={() => handleScrollTo('urgeiq-section')}
           onScrollToHobby={() => handleScrollTo('hobby-corner')}
           onScrollToAbout={() => handleScrollTo('about-section')}
         />
 
-        <UrgeIQShowcase content={currentContent} />
+        <UrgeIQShowcase content={currentContent} version={urgeiqVersion} />
 
         <HobbyCorner content={currentContent} />
 

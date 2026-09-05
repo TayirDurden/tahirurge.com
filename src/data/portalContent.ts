@@ -21,7 +21,7 @@ export const portalContent: Record<Language, PortalContent> = {
       sublead: "Mehmet Tahir Ürge tarafından geliştirilen; karmaşık işletme nakit akışını akılcılaştıran ve operasyonel kayıpları önleyen yeni nesil finansal işletim sistemi.",
       ctaPrimary: "UrgeIQ'yu İncele",
       ctaSecondary: "Sistem Yetenekleri",
-      liveBadge: "Canlı Operasyon • v0.15",
+      liveBadge: "Canlı Operasyon • v0.19.0",
       highlights: [
         { label: "Mimari", value: "MSSQL ↔ Supabase" },
         { label: "Optimizasyon", value: "Dinamik POS Komisyonu" },
@@ -192,7 +192,7 @@ export const portalContent: Record<Language, PortalContent> = {
       sublead: "Engineered by Mehmet Tahir Ürge; an advanced financial operating system that rationalizes enterprise cash flow and eliminates merchant settlement leakage.",
       ctaPrimary: "Explore UrgeIQ",
       ctaSecondary: "System Architecture",
-      liveBadge: "Live Production • v0.15",
+      liveBadge: "Live Production • v0.19.0",
       highlights: [
         { label: "Architecture", value: "MSSQL ↔ Supabase" },
         { label: "Optimization", value: "Dynamic POS Commission" },

@@ -14,9 +14,10 @@ import { UrgeIQLogo } from '../common/UrgeIQLogo';
 
 interface UrgeIQShowcaseProps {
   content: PortalContent;
+  version?: string;
 }
 
-export const UrgeIQShowcase: React.FC<UrgeIQShowcaseProps> = ({ content }) => {
+export const UrgeIQShowcase: React.FC<UrgeIQShowcaseProps> = ({ content, version }) => {
   const { urgeiqSection } = content;
 
   const getFeatureIcon = (iconName?: string) => {
@@ -75,7 +76,7 @@ export const UrgeIQShowcase: React.FC<UrgeIQShowcaseProps> = ({ content }) => {
                   <div className="flex items-center gap-2">
                     <span className="text-xl font-bold tracking-tight text-white font-sans">UrgeIQ</span>
                     <span className="px-2 py-0.5 rounded-md bg-indigo-500/20 border border-indigo-400/30 text-[10px] font-medium text-indigo-300">
-                      v0.15 Production
+                      v{version || '0.19.0'} Production
                     </span>
                   </div>
                   <span className="text-xs text-neutral-400 font-sans">POS Control & Financial Operating System</span>
