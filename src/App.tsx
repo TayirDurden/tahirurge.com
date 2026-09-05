@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Language } from './types/portal';
-import { portalContent, portalProjects } from './data/portalContent';
+import { portalContent } from './data/portalContent';
 import { PortalNavbar } from './components/portal/PortalNavbar';
 import { PortalHero } from './components/portal/PortalHero';
-import { ProjectsHub } from './components/portal/ProjectsHub';
+import { UrgeIQShowcase } from './components/portal/UrgeIQShowcase';
+import { HobbyCorner } from './components/portal/HobbyCorner';
 import { AboutSection } from './components/portal/AboutSection';
 import { PortalFooter } from './components/portal/PortalFooter';
 
@@ -24,8 +25,8 @@ export const App: React.FC = () => {
   useEffect(() => {
     document.documentElement.lang = language;
     document.title = language === 'tr'
-      ? 'Mehmet Tahir Ürge — UrgeIQ & Edebi Eserler'
-      : 'Mehmet Tahir Ürge — UrgeIQ & Literature';
+      ? 'Mehmet Tahir Ürge — UrgeIQ & Sistem Mimarisi'
+      : 'Mehmet Tahir Ürge — UrgeIQ & Software Systems';
   }, [language]);
 
   const handleScrollTo = (id: string) => {
@@ -36,12 +37,12 @@ export const App: React.FC = () => {
   };
 
   const currentContent = portalContent[language];
-  const currentProjects = portalProjects[language];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF9F6] text-neutral-900 selection:bg-amber-200 selection:text-neutral-900">
+    <div className="min-h-screen flex flex-col bg-[#FAF9F6] text-neutral-900 selection:bg-indigo-100 selection:text-indigo-950 font-sans">
       <PortalNavbar
         language={language}
+        content={currentContent}
         onToggleLanguage={handleToggleLanguage}
         onScrollTo={handleScrollTo}
       />
@@ -49,14 +50,14 @@ export const App: React.FC = () => {
       <main className="flex-1">
         <PortalHero
           content={currentContent}
-          onScrollToProjects={() => handleScrollTo('projects-section')}
+          onScrollToUrgeIQ={() => handleScrollTo('urgeiq-section')}
+          onScrollToHobby={() => handleScrollTo('hobby-corner')}
           onScrollToAbout={() => handleScrollTo('about-section')}
         />
 
-        <ProjectsHub
-          content={currentContent}
-          projects={currentProjects}
-        />
+        <UrgeIQShowcase content={currentContent} />
+
+        <HobbyCorner content={currentContent} />
 
         <AboutSection content={currentContent} />
       </main>

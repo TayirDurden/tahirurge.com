@@ -1,19 +1,30 @@
 export type Language = 'tr' | 'en';
 
-export interface ProjectItem {
+export interface UrgeIQFeature {
+  title: string;
+  description: string;
+  badge?: string;
+  iconName?: 'cpu' | 'database' | 'trending-up' | 'layers' | 'shield-check' | 'zap';
+}
+
+export interface UrgeIQMetric {
+  label: string;
+  value: string;
+  subtext: string;
+}
+
+export interface HobbyProject {
   id: string;
   title: string;
   subtitle: string;
-  tag: string;
-  status: 'active' | 'in-progress' | 'concept';
+  category: string;
+  status: 'active' | 'in-progress' | 'planned';
   statusText: string;
   description: string;
-  features: string[];
-  link: string;
-  linkText: string;
-  isExternal: boolean;
-  accentColor: string;
-  category: 'literature' | 'finance' | 'experimental';
+  highlights: string[];
+  link?: string;
+  linkText?: string;
+  isExternal?: boolean;
 }
 
 export interface PortalContent {
@@ -22,22 +33,49 @@ export interface PortalContent {
     title: string;
     location: string;
   };
+  nav: {
+    urgeiq: string;
+    showcase: string;
+    hobbyCorner: string;
+    about: string;
+    openApp: string;
+  };
   hero: {
     badge: string;
-    greeting: string;
+    title: string;
     lead: string;
     sublead: string;
-    ctaProjects: string;
-    ctaAbout: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    liveBadge: string;
+    highlights: {
+      label: string;
+      value: string;
+    }[];
   };
-  projectsSection: {
+  urgeiqSection: {
+    badge: string;
     title: string;
     subtitle: string;
-    viewProject: string;
-    statusActive: string;
-    statusUpcoming: string;
+    description: string;
+    liveUrl: string;
+    liveUrlText: string;
+    metricsTitle: string;
+    metrics: UrgeIQMetric[];
+    featuresTitle: string;
+    features: UrgeIQFeature[];
+    techStackTitle: string;
+    techStack: string[];
+  };
+  hobbyCorner: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    intro: string;
+    projects: HobbyProject[];
   };
   aboutSection: {
+    badge: string;
     title: string;
     subtitle: string;
     paragraphs: string[];

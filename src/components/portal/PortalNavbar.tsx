@@ -1,15 +1,18 @@
 import React from 'react';
-import { Language } from '../../types/portal';
+import { ArrowUpRight } from 'lucide-react';
+import { Language, PortalContent } from '../../types/portal';
 import { UrgeIQLogo } from '../common/UrgeIQLogo';
 
 interface PortalNavbarProps {
   language: Language;
+  content: PortalContent;
   onToggleLanguage: () => void;
   onScrollTo: (id: string) => void;
 }
 
 export const PortalNavbar: React.FC<PortalNavbarProps> = ({
   language,
+  content,
   onToggleLanguage,
   onScrollTo,
 }) => {
@@ -25,7 +28,7 @@ export const PortalNavbar: React.FC<PortalNavbarProps> = ({
               Mehmet Tahir Ürge
             </span>
             <span className="text-[10px] text-neutral-400 font-medium tracking-wide">
-              UrgeIQ & Literature
+              UrgeIQ & Studio
             </span>
           </div>
         </a>
@@ -34,30 +37,36 @@ export const PortalNavbar: React.FC<PortalNavbarProps> = ({
         <div className="flex items-center gap-3 sm:gap-6">
           <nav className="flex items-center gap-4 sm:gap-6 text-xs font-medium text-neutral-600">
             <button
-              onClick={() => onScrollTo('projects-section')}
-              className="hover:text-neutral-950 transition-colors cursor-pointer"
+              onClick={() => onScrollTo('urgeiq-section')}
+              className="hover:text-indigo-600 transition-colors cursor-pointer font-semibold text-neutral-800"
             >
-              {language === 'tr' ? 'Projeler' : 'Projects'}
+              {content.nav.urgeiq}
+            </button>
+            <button
+              onClick={() => onScrollTo('hobby-corner')}
+              className="hover:text-amber-800 transition-colors cursor-pointer"
+            >
+              {content.nav.hobbyCorner}
             </button>
             <button
               onClick={() => onScrollTo('about-section')}
               className="hover:text-neutral-950 transition-colors cursor-pointer"
             >
-              {language === 'tr' ? 'Hakkımda' : 'About'}
+              {content.nav.about}
             </button>
           </nav>
 
           <div className="h-4 w-px bg-neutral-200 hidden sm:block" />
 
-          {/* Direct Subdomain Pill */}
+          {/* Primary Action Button to Live App */}
           <a
             href="https://pnl.tahirurge.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-indigo-50/80 border border-indigo-200/60 text-indigo-700 text-xs font-medium hover:bg-indigo-100/80 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold transition-all shadow-2xs hover:shadow-xs active:scale-98"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse" />
-            <span>UrgeIQ PnL</span>
+            <span>{content.nav.openApp}</span>
+            <ArrowUpRight className="w-3 h-3 text-indigo-300" />
           </a>
 
           {/* Language Switch */}

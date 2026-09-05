@@ -1,5 +1,5 @@
 import React from 'react';
-import { Feather, Layers, Code2 } from 'lucide-react';
+import { Feather, Layers, Code2, User } from 'lucide-react';
 import { PortalContent } from '../../types/portal';
 
 interface AboutSectionProps {
@@ -7,12 +7,14 @@ interface AboutSectionProps {
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ content }) => {
+  const { aboutSection, brand, footer } = content;
+
   const getFocusIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <Code2 className="w-4 h-4 text-neutral-800" />;
-      case 1:
         return <Layers className="w-4 h-4 text-indigo-600" />;
+      case 1:
+        return <Code2 className="w-4 h-4 text-neutral-800" />;
       default:
         return <Feather className="w-4 h-4 text-amber-700" />;
     }
@@ -26,20 +28,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ content }) => {
           
           {/* Left: Bio */}
           <div className="lg:col-span-6 flex flex-col items-start">
-            <span className="text-[11px] uppercase tracking-widest text-neutral-400 font-semibold mb-3 block">
-              {content.aboutSection.title}
-            </span>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-600 text-[11px] font-semibold tracking-wider uppercase mb-3.5">
+              <User className="w-3 h-3 text-neutral-500" />
+              <span>{aboutSection.badge}</span>
+            </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl font-normal text-neutral-900 tracking-tight mb-2">
-              {content.brand.name}
+              {brand.name}
             </h2>
 
             <p className="text-xs uppercase tracking-wider text-amber-800/80 font-medium mb-6 font-sans">
-              {content.aboutSection.subtitle}
+              {aboutSection.subtitle}
             </p>
 
             <div className="space-y-4 text-neutral-600 text-sm leading-relaxed font-sans">
-              {content.aboutSection.paragraphs.map((para, i) => (
+              {aboutSection.paragraphs.map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
             </div>
@@ -47,10 +50,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ content }) => {
             {/* Minimalist Quote */}
             <div className="mt-8 pt-6 border-t border-neutral-200/60 w-full">
               <p className="font-serif italic text-sm text-neutral-700 leading-relaxed mb-1.5">
-                "{content.footer.quote}"
+                "{footer.quote}"
               </p>
-              <span className="text-[11px] text-neutral-400 font-medium">
-                — {content.brand.name}
+              <span className="text-[11px] text-neutral-400 font-medium font-sans">
+                — {brand.name}
               </span>
             </div>
           </div>
@@ -58,15 +61,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ content }) => {
           {/* Right: 3 Focus Areas */}
           <div className="lg:col-span-6 space-y-4 pt-1 lg:pt-0">
             <span className="text-[11px] uppercase tracking-widest text-neutral-400 font-semibold mb-2 block">
-              {content.aboutSection.focusAreasTitle}
+              {aboutSection.focusAreasTitle}
             </span>
 
-            {content.aboutSection.focusAreas.map((area, idx) => (
+            {aboutSection.focusAreas.map((area, idx) => (
               <div
                 key={idx}
                 className="p-5 rounded-xl bg-white border border-neutral-200/70 hover:border-neutral-300 transition-all flex items-start gap-3.5 shadow-2xs"
               >
-                <div className="w-8 h-8 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                   {getFocusIcon(idx)}
                 </div>
                 <div>
